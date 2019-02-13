@@ -25,6 +25,7 @@ if ( ! class_exists( 'SSWT5' ) ) {
 			$this->load_front_end_assets();
 			$this->load_options_page();
 			$this->load_template();
+			$this->maintenance_mode();
 		}
 
 		function load_front_end_assets() {
@@ -40,6 +41,11 @@ if ( ! class_exists( 'SSWT5' ) ) {
 
 		function load_template() {
 			require_once get_stylesheet_directory() . '/inc/class-sswt5-template.php';
+		}
+
+		function maintenance_mode() {
+			require get_stylesheet_directory() . '/inc/class-sswt5-maintenance.php';
+			SSWT5_Maintenance::maintenance();
 		}
 	}
 }

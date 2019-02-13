@@ -31,20 +31,11 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
-		'name' => __( 'Enable sidebar' ),
-		'id'   => 'ss_enable_sidebar',
-		'desc' => __( 'Enable' ),
-		'std'  => '1',
+		'name' => __( 'Maintenance' ),
+		'id'   => 'ss_maintenance',
+		'desc' => __( 'Enable maintenance mode' ),
+		'std'  => '0',
 		'type' => 'checkbox'
-	);
-
-	$options[] = array(
-		'name'    => __( 'Number of posts in front page', 'theme-textdomain' ),
-		'id'      => 'ss_nop',
-		'std'     => '8',
-		'type'    => 'select',
-		'class'   => 'mini', //mini, tiny, small
-		'options' => array( '4' => '4', '8' => '8', '12' => '12'),
 	);
 
 	return $options;
